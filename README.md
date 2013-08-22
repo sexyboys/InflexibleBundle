@@ -364,11 +364,13 @@ Requirements
 ------------
 
 * PHP 5.3+
+* Symfony 2
 
 Authors
 -------
 
 Boris Guéry - <guery.b@gmail.com> - <http://twitter.com/borisguery> - <http://borisguery.com>
+
 Eric Pidoux - <eric.pidoux@gmail.com> - <http://twitter.com/epidoux> - <http://eric-pidoux.com>
 
 License
