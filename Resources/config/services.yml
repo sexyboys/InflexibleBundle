@@ -1,7 +1,100 @@
 parameters:
-     #your.class: Path\To\Class
+     #your.class: Path\To\
+     inflexible.class: Sexyboys\InflexibleBundle\Services\Inflexible
+     camelize.class: Sexyboys\InflexibleBundle\Twig\Extension\CamelizeExtension
+     denamespace.class: Sexyboys\InflexibleBundle\Twig\Extension\DenamespaceExtension
+     humanbyte.class: Sexyboys\InflexibleBundle\Twig\Extension\HumanByteExtension
+     humanize.class: Sexyboys\InflexibleBundle\Twig\Extension\HumanizeExtension
+     namespace_only.class: Sexyboys\InflexibleBundle\Twig\Extension\NamespaceOnlyExtension
+     ordinalize.class: Sexyboys\InflexibleBundle\Twig\Extension\OrdinalizeExtension
+     pluralize.class: Sexyboys\InflexibleBundle\Twig\Extension\PluralizeExtension
+     relative_datetime.class: Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeExtension
+     relative_datetime_string.class: Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeStringExtension
+     shorten_number.class: Sexyboys\InflexibleBundle\Twig\Extension\ShortenNumberExtension
+     singularize.class: Sexyboys\InflexibleBundle\Twig\Extension\ShortenStringExtension
+     slugify.class: Sexyboys\InflexibleBundle\Twig\Extension\SlugifyExtension
+     tableize.class: Sexyboys\InflexibleBundle\Twig\Extension\TableizeExtension
+     textualize.class: Sexyboys\InflexibleBundle\Twig\Extension\TextualizeExtension
+
+
 
 services:
-     #inflexible.service:
-        #class: %your.class%
-        #arguments: []
+     inflexible:
+        class: %inflexible.class%
+        arguments: []
+
+     #Twig extensions
+     inflexible.camelize_extension:
+              class: %camelize.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.denamespace_extension:
+              class: %denamespace.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.humanbyte_extension:
+              class: %humanbyte.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.humanize_extension:
+              class: %humanize.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.namespace_only_extension:
+              class: %namespace_only.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.ordinalize_extension:
+              class: %ordinalize.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.pluralize_extension:
+              class: %pluralize.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.relative_datetime_extension:
+              class: %relative_datetime.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.relative_datetime_string_extension:
+              class: %relative_datetime_string.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.shorten_number_extension:
+              class: %shorten_number.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.shorten_string_extension:
+              class: %shorten_string.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.singularize_extension:
+              class: %singularize.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.slugify_extension:
+              class: %slugify.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.tableize_extension:
+              class: %tableize.class%
+              tags:
+                 - { name: twig.extension }
+
+     inflexible.textualize_extension:
+              class: %textualize.class%
+              tags:
+                 - { name: twig.extension }

@@ -35,8 +35,8 @@ Table of contents
 Description
 -----------
 
-InflexibleBundle provide a bridge between Symfony2 and Inflexible library which aims to gather a collection of commonly used Inflectors into a single lib.
-
+InflexibleBundle provide a bridge between Symfony2  and Inflexible library which aims to gather a collection of commonly used Inflectors into a single lib.
+It provides twig extensions too.
 Installation
 ------------
 
