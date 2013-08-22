@@ -1,0 +1,4 @@
+#service:
+#    pattern:  /path/you/want
+#    defaults: { _controller: OwnBundle:Controller:Method }
+

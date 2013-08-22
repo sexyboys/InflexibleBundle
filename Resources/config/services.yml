@@ -1,0 +1,7 @@
+parameters:
+     #your.class: Path\To\Class
+
+services:
+     #inflexible.service:
+        #class: %your.class%
+        #arguments: []
