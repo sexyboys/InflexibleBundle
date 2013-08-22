@@ -6,26 +6,24 @@ Table of contents
 
 1. [Description](#description)
 2. [Installation](#installation)
- 1. [Use Twig Filters](#twig-filters)
 3. [Usage](#usage)
- 1. [Available inflectors](#available-inflectors)
-   1. [Datetime](#datetime)
-     1. [Relative](#relative)
-   2. [Number](#number)
-     1. [HumanByte](#humanbyte)
-     2. [Ordinalize](#ordinalize)
-     3. [Shorten](#shorten)
-     4. [Textualize](#textualize)
-   3. [String](#string)
-     1. [Camelize](#camelize)
-     2. [Denamespace](#denamespace)
-     3. [Humanize](#humanize)
-     4. [NamespaceOnly](#namespaceonly)
-     5. [Slugify](#slugify)
-     6. [Shorten](#shorten-string)
-     7. [Pluralize](#pluralize)
-     8. [Singularize](#singularize)
-     9. [Tableize](#tableize)
+  1. [Datetime](#datetime)
+    1. [Relative](#relative)
+  2. [Number](#number)
+    1. [HumanByte](#humanbyte)
+    2. [Ordinalize](#ordinalize)
+    3. [Shorten](#shorten)
+    4. [Textualize](#textualize)
+  3. [String](#string)
+    1. [Camelize](#camelize)
+    2. [Denamespace](#denamespace)
+    3. [Humanize](#humanize)
+    4. [NamespaceOnly](#namespaceonly)
+    5. [Slugify](#slugify)
+    6. [Shorten](#shorten-string)
+    7. [Pluralize](#pluralize)
+    8. [Singularize](#singularize)
+    9. [Tableize](#tableize)
 4. [Run the test](#run-the-test)
 5. [Contributing](#contributing)
 6. [Requirements](#requirements)
@@ -35,8 +33,9 @@ Table of contents
 Description
 -----------
 
-InflexibleBundle provide a bridge between Symfony2  and Inflexible library which aims to gather a collection of commonly used Inflectors into a single lib.
+InflexibleBundle provides a bridge between Symfony2 and Inflexible library which aims to gather a collection of commonly used Inflectors into a single lib.
 It provides twig extensions too.
+
 Installation
 ------------
 
@@ -49,21 +48,22 @@ Using [Composer](http://getcomposer.org/), just `$ composer require sexyboys/inf
   }
 }
 ```
+
 Usage
 -----
 
-### Available inflectors
+To use it, just call the service named "inflexible" which provides all functions of Inflexible library.
 
-#### Datetime
+  # Datetime
 
-##### Relative
-
+    ## Relative
 Convert a `DateTime` object or a number of seconds into the most fitted unit:
-###### Php
+
+### Php
 ```php
-Inflexible::relativeDatetime(86400);
+$this->container->get('inflexible')->relativeDatetime(86400);
 ```
-###### Twig
+### Twig
 ```twig
 86400|relativeDatetime
 ```
@@ -79,11 +79,11 @@ array(
 
 You may also want to get the relative datetime from a given date:
 
-###### Php
+### Php
 ```php
-Inflexible::relativeDatetime(new DateTime('2012-01-10'), new DateTime('2012-01-17'));
+$this->container->get('inflexible')->relativeDatetime(new DateTime('2012-01-10'), new DateTime('2012-01-17'));
 ```
-###### Twig
+### Twig
 ```twig
 post.firstDate|relativeDatetime(post.secondDate)
 ```
@@ -107,171 +107,171 @@ The available units are:
 * month
 * year
 
-#### Number
+# Number
 
-##### HumanByte
+## HumanByte
 
 Convert bytes to an human readable representation to the most fitted unit:
 
-###### Php
+### Php
 ```php
-Inflexible::humanByte(1024);
+$this->container->get('inflexible')->humanByte(1024);
 // 1.00 KB
 ```
 
 ```php
-Inflexible::humanByte(1048576);
+$this->container->get('inflexible')->humanByte(1048576);
 // 1.00 MB
 ```
 
 ```php
-Inflexible::humanByte(1073741824);
+$this->container->get('inflexible')->humanByte(1073741824);
 // 1.00 GB
 ```
-###### Twig
+### Twig
 ```twig
 1024|human_byte
 ```
 
 You may also provided an optional precision as a second argument (default to 2)
 
-
-##### Ordinalize
+## Ordinalize
 
 Converts number to its ordinal English form:
 
-###### Php
+### Php
 ```php
-Inflexible::ordinalize(1);
+$this->container->get('inflexible')->ordinalize(1);
 // 1st
 ```
 
 ```php
-Inflexible::ordinalize(13);
+$this->container->get('inflexible')->ordinalize(13);
 // 13th
 ```
-###### Twig
+### Twig
 ```twig
 13|ordinalize
 ```
 
-##### Shorten
+## Shorten
 
 Formats a number using the SI units (k, M, G, etc.):
 
-###### Php
+### Php
 ```php
-Inflexible::shorten(100);
+$this->container->get('inflexible')->shorten(100);
 // array(100, null)
 // No units for number < 1000
 ```
 
 ```php
-Inflexible::shorten(1523);
+$this->container->get('inflexible')->shorten(1523);
 // 1k
 ```
-###### Twig
+### Twig
 ```twig
 1523|shorten_number
 ```
 
-##### Textualize
+## Textualize
 
 Returns the textual representation of a number
 
-###### Php
+### Php
 ```php
-Inflexible::textualize(1025433);
+$this->container->get('inflexible')->textualize(1025433);
 // One Million, Twenty Five Thousand, Four Hundred and Thirty Three
 ```
-###### Twig
+### Twig
 ```twig
 1025433|textualize
 ```
 
 
-#### String
+# String
 
-##### Camelize
+## Camelize
+
 Converts a word like "foo_bar" to "FooBar".
 It also removes non-alphanumeric characters:
 
-###### Php
+### Php
 ```php
-Inflexible::camelize('foo_bar');
+$this->container->get('inflexible')->camelize('foo_bar');
 // FooBar
 ```
-###### Twig
+### Twig
 ```twig
 'foo_bar'|camelize
 ```
 
-##### Denamespace
+## Denamespace
 
 Returns only the class name
 
-###### Php
+### Php
 ```php
-Inflexible::denamespace('\Foo\Bar\Baz');
+$this->container->get('inflexible')->denamespace('\Foo\Bar\Baz');
 // Baz
 ```
-###### Twig
+### Twig
 ```twig
 '\Foo\Bar\Baz'|denamespace
 ```
 
-##### Humanize
+## Humanize
 
 Converts CamelCased word and underscore to space to return a readable string:
 
-###### Php
+### Php
 ```php
-Inflexible::humanize('foo_bar');
+$this->container->get('inflexible')->humanize('foo_bar');
 // Foo Bar
 ```
 
 ```php
-Inflexible::humanize('FooBar');
+$this->container->get('inflexible')->humanize('FooBar');
 // Foo Bar
 ```
-###### Twig
+### Twig
 ```twig
 'FooBar'|humanize
 ```
 
-##### NamespaceOnly
+## NamespaceOnly
 
 Returns the namespace of a fully qualified class name:
 
-###### Php
+### Php
 ```php
-Inflexible::namespaceOnly('\Foo\Bar\Baz');
+$this->container->get('inflexible')->namespaceOnly('\Foo\Bar\Baz');
 // Foo\Bar
 ```
-###### Twig
+### Twig
 ```twig
 '\Foo\Bar\Baz'|namespace_only
 ```
 
-##### Slugify
+## Slugify
 
 Slugify a string:
 
-###### Php
+### Php
 ```php
-Inflexible::slugify('lo\rem ipsum do|or sid amet||| #\`[|\" 10 .');
+$this->container->get('inflexible')->slugify('lo\rem ipsum do|or sid amet||| #\`[|\" 10 .');
 // lo-rem-ipsum-do-or-sid-amet-10
 ```
-###### Twig
+### Twig
 ```twig
 'lo\rem ipsum do|or sid amet||| #\`[|\" 10 .'|slugify
 ```
 
 You may optionally set the separator, a max length or decide to whether lower the case:
 
-###### Php
+### Php
 ```php
-Inflexible::slugify(
+$this->container->get('inflexible')->slugify(
     'LoRem ipsum do|or sid amet||| #\`[|\" 10 .',
     array(
         'maxlength' => 4,
@@ -281,62 +281,62 @@ Inflexible::slugify(
 );
 // lore
 ```
-###### Twig
+### Twig
 ```twig
 'lo\rem ipsum do|or sid amet||| #\`[|\" 10 .'|slugify(options)
 ```
 
-##### Shorten
+## Shorten
 
 Shorten a string using the options such as the maximum length, affix and its position:
 
-###### Php
+### Php
 ```php
-Inflexible::shorten("Lorem ipsum dolor sit amet",5,Shorten::AFFIX_POSITION_START);
+$this->container->get('inflexible')->shorten("Lorem ipsum dolor sit amet",5,Shorten::AFFIX_POSITION_START);
 ```
-###### Twig
+### Twig
 ```twig
 "Lorem ipsum dolor sit amet"|shorten_number(5,'start')
 ```
 
-##### Pluralize
+## Pluralize
 
 Returns a word in plural form:
 
-###### Php
+### Php
 ```php
-Inflexible::pluralize("child");
+$this->container->get('inflexible')->pluralize("child");
 //children
 ```
-###### Twig
+### Twig
 ```twig
 "child"|pluralize
 ```
 
-##### Singularize
+## Singularize
 
 Returns a word in singular form:
 
-###### Php
+### Php
 ```php
-Inflexible::singularize("children");
+$this->container->get('inflexible')->singularize("children");
 //child
 ```
-###### Twig
+### Twig
 ```twig
 "children"|singularize
 ```
 
-##### Tableize
+## Tableize
 
 Converts a word into the format for a Doctrine table name:
 
-###### Php
+### Php
 ```php
-Inflexible::tableize("ModelName");
+$this->container->get('inflexible')->tableize("ModelName");
 //model_name
 ```
-###### Twig
+### Twig
 ```twig
 "ModelName"|tableize
 ```
@@ -355,7 +355,7 @@ then, run the test from within the root directory:
 Contributing
 ------------
 
-1. Take a look at the [list of issues](http://github.com/borisguery/Inflexible/issues).
+1. Take a look at the [list of issues](http://github.com/sexyboys/InflexibleBundle/issues).
 2. Fork
 3. Write a test (for either new feature or bug)
 4. Make a PR
@@ -374,4 +374,4 @@ Eric Pidoux - <eric.pidoux@gmail.com> - <http://twitter.com/epidoux> - <http://e
 License
 -------
 
-`Inflexible` is licensed under the WTFPL License - see the LICENSE file for details
+`InflexibleBundle` is licensed under the WTFPL License - see the LICENSE file for details
