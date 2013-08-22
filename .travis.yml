@@ -12,4 +12,3 @@ script: phpunit --coverage-text
 notifications:
   email:
     - eric.pidoux@gmail.com
-    - guery.b@gmail.com
