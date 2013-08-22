@@ -54,16 +54,16 @@ Usage
 
 To use it, just call the service named "inflexible" which provides all functions of Inflexible library.
 
-  # Datetime
+##Datetime
 
-    ## Relative
+### Relative
 Convert a `DateTime` object or a number of seconds into the most fitted unit:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->relativeDatetime(86400);
 ```
-### Twig
+#### Twig
 ```twig
 86400|relativeDatetime
 ```
@@ -79,11 +79,11 @@ array(
 
 You may also want to get the relative datetime from a given date:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->relativeDatetime(new DateTime('2012-01-10'), new DateTime('2012-01-17'));
 ```
-### Twig
+#### Twig
 ```twig
 post.firstDate|relativeDatetime(post.secondDate)
 ```
@@ -107,13 +107,13 @@ The available units are:
 * month
 * year
 
-# Number
+## Number
 
-## HumanByte
+### HumanByte
 
 Convert bytes to an human readable representation to the most fitted unit:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->humanByte(1024);
 // 1.00 KB
@@ -128,18 +128,18 @@ $this->container->get('inflexible')->humanByte(1048576);
 $this->container->get('inflexible')->humanByte(1073741824);
 // 1.00 GB
 ```
-### Twig
+#### Twig
 ```twig
 1024|human_byte
 ```
 
 You may also provided an optional precision as a second argument (default to 2)
 
-## Ordinalize
+### Ordinalize
 
 Converts number to its ordinal English form:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->ordinalize(1);
 // 1st
@@ -149,16 +149,16 @@ $this->container->get('inflexible')->ordinalize(1);
 $this->container->get('inflexible')->ordinalize(13);
 // 13th
 ```
-### Twig
+#### Twig
 ```twig
 13|ordinalize
 ```
 
-## Shorten
+### Shorten
 
 Formats a number using the SI units (k, M, G, etc.):
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->shorten(100);
 // array(100, null)
@@ -169,62 +169,62 @@ $this->container->get('inflexible')->shorten(100);
 $this->container->get('inflexible')->shorten(1523);
 // 1k
 ```
-### Twig
+#### Twig
 ```twig
 1523|shorten_number
 ```
 
-## Textualize
+### Textualize
 
 Returns the textual representation of a number
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->textualize(1025433);
 // One Million, Twenty Five Thousand, Four Hundred and Thirty Three
 ```
-### Twig
+#### Twig
 ```twig
 1025433|textualize
 ```
 
 
-# String
+## String
 
-## Camelize
+### Camelize
 
 Converts a word like "foo_bar" to "FooBar".
 It also removes non-alphanumeric characters:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->camelize('foo_bar');
 // FooBar
 ```
-### Twig
+#### Twig
 ```twig
 'foo_bar'|camelize
 ```
 
-## Denamespace
+### Denamespace
 
 Returns only the class name
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->denamespace('\Foo\Bar\Baz');
 // Baz
 ```
-### Twig
+#### Twig
 ```twig
 '\Foo\Bar\Baz'|denamespace
 ```
 
-## Humanize
+### Humanize
 
 Converts CamelCased word and underscore to space to return a readable string:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->humanize('foo_bar');
 // Foo Bar
@@ -234,42 +234,42 @@ $this->container->get('inflexible')->humanize('foo_bar');
 $this->container->get('inflexible')->humanize('FooBar');
 // Foo Bar
 ```
-### Twig
+#### Twig
 ```twig
 'FooBar'|humanize
 ```
 
-## NamespaceOnly
+### NamespaceOnly
 
 Returns the namespace of a fully qualified class name:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->namespaceOnly('\Foo\Bar\Baz');
 // Foo\Bar
 ```
-### Twig
+#### Twig
 ```twig
 '\Foo\Bar\Baz'|namespace_only
 ```
 
-## Slugify
+### Slugify
 
 Slugify a string:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->slugify('lo\rem ipsum do|or sid amet||| #\`[|\" 10 .');
 // lo-rem-ipsum-do-or-sid-amet-10
 ```
-### Twig
+#### Twig
 ```twig
 'lo\rem ipsum do|or sid amet||| #\`[|\" 10 .'|slugify
 ```
 
 You may optionally set the separator, a max length or decide to whether lower the case:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->slugify(
     'LoRem ipsum do|or sid amet||| #\`[|\" 10 .',
@@ -281,62 +281,62 @@ $this->container->get('inflexible')->slugify(
 );
 // lore
 ```
-### Twig
+#### Twig
 ```twig
 'lo\rem ipsum do|or sid amet||| #\`[|\" 10 .'|slugify(options)
 ```
 
-## Shorten
+### Shorten
 
 Shorten a string using the options such as the maximum length, affix and its position:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->shorten("Lorem ipsum dolor sit amet",5,Shorten::AFFIX_POSITION_START);
 ```
-### Twig
+#### Twig
 ```twig
 "Lorem ipsum dolor sit amet"|shorten_number(5,'start')
 ```
 
-## Pluralize
+### Pluralize
 
 Returns a word in plural form:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->pluralize("child");
 //children
 ```
-### Twig
+#### Twig
 ```twig
 "child"|pluralize
 ```
 
-## Singularize
+### Singularize
 
 Returns a word in singular form:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->singularize("children");
 //child
 ```
-### Twig
+#### Twig
 ```twig
 "children"|singularize
 ```
 
-## Tableize
+### Tableize
 
 Converts a word into the format for a Doctrine table name:
 
-### Php
+#### Php
 ```php
 $this->container->get('inflexible')->tableize("ModelName");
 //model_name
 ```
-### Twig
+#### Twig
 ```twig
 "ModelName"|tableize
 ```
