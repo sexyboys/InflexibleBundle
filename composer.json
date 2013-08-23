@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.3.2",
         "symfony/framework-bundle": ">=2.1",
-        "borisguery/inflexible": "1.0.x-dev",
+        "borisguery/inflexible": "dev",
         "symfony/twig-bundle": "~2.0",
         "twig/twig": "~1.12"
     },
