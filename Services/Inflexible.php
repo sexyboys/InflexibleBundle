@@ -99,7 +99,7 @@ class Inflexible {
     /**
      * @see Inflexible\String\Relative::inflect()
      */
-    public function slugify($string,$options = null)
+    public function slugify($string,$options = array())
     {
         return Slugify::inflect($string,$options);
     }
