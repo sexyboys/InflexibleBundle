@@ -24,7 +24,7 @@ class SingularizeExtension extends \Twig_Extension
      * @param $value the word
      * @return string
      */
-    public function singularizeFilter($value)
+    public function SingularizeFilter($value)
     {
         return Inflexible::singularize($value);
 
