@@ -49,6 +49,11 @@ Using [Composer](http://getcomposer.org/), just `$ composer require sexyboys/inf
 }
 ```
 
+Define the bundle inside your AppKernel.php file
+
+
+new Sexyboys\InflexibleBundle\SexyboysInflexibleBundle()
+
 Usage
 -----
 
