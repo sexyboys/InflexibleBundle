@@ -3,6 +3,8 @@
 namespace Sexyboys\InflexibleBundle\Tests\Twig\Extension;
 
 
+use Sexyboys\InflexibleBundle\Twig\Extension\HumanizeExtension;
+
 /**
  * Class HumanizeExtensionTest
  * @package Sexyboys\InflexibleBundle\Tests\Twig\Extension

@@ -3,6 +3,8 @@
 namespace Sexyboys\InflexibleBundle\Tests\Twig\Extension;
 
 
+use Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeStringExtension;
+
 /**
  * Class RelativeDatetimeStringExtensionTest
  * @package Sexyboys\InflexibleBundle\Tests\Twig\Extension

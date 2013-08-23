@@ -2,7 +2,7 @@
 
 namespace Sexyboys\InflexibleBundle\Tests\Twig\Extension;
 
-
+use Sexyboys\InflexibleBundle\Twig\Extension\CamelizeExtension;
 /**
  * Class CamelizeExtensionTest
  * @package Sexyboys\InflexibleBundle\Tests\Twig\Extension

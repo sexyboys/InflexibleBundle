@@ -2,6 +2,7 @@
 
 namespace Sexyboys\InflexibleBundle\Tests\Twig\Extension;
 
+use Sexyboys\InflexibleBundle\Twig\Extension\PluralizeExtension;
 
 /**
  * Class PluralizeExtensionTest

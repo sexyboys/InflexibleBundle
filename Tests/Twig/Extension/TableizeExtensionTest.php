@@ -3,6 +3,8 @@
 namespace Sexyboys\InflexibleBundle\Tests\Twig\Extension;
 
 
+use Sexyboys\InflexibleBundle\Twig\Extension\TableizeExtension;
+
 /**
  * Class TableizeExtensionTest
  * @package Sexyboys\InflexibleBundle\Tests\Twig\Extension
