@@ -27,7 +27,6 @@ class InflexibleTest extends \PHPUnit_Framework_TestCase{
     public function testRelativeDatetime()
     {
         $this->assertEquals(array(1,"minute"), $this->service->relativeDatetime(60));
-        $this->assertEquals("1 minute", $this->service->relativeDatetime(60));
 
     }
 
@@ -38,7 +37,7 @@ class InflexibleTest extends \PHPUnit_Framework_TestCase{
 
     public function testOrdinalize()
     {
-        $this->assertEquals("1.00 GB", $this->service->ordinalize(1073741824));
+        $this->assertEquals('1st', $this->service->ordinalize(1));
     }
 
     public function testTextualize()
