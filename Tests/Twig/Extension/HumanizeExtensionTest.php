@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\HumanizeExtension;
 class HumanizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\HumanizeExtension::HumanizeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\HumanizeExtension::HumanizeFilter
      */
     public function testHumanizeFilter()
     {

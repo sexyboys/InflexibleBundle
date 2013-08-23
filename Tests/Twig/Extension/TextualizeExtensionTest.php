@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\TextualizeExtension;
 class TextualizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\TextualizeExtension::TextualizeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\TextualizeExtension::TextualizeFilter
      */
     public function testTextualizeFilter()
     {

@@ -11,7 +11,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\CamelizeExtension;
 class CamelizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\CamelizeExtension::CamelizeFilter
+     * @see Sexyboys\InflexibleBundle\Twig\Extension\CamelizeExtension::CamelizeFilter
      */
     public function testCamelizeFilter()
     {

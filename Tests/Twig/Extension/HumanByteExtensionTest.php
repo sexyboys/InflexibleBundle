@@ -12,7 +12,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\HumanByteExtension;
 class HumanByteExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\HumanByteExtension::HumanByteFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\HumanByteExtension::HumanByteFilter
      */
     public function testHumanByteFilter()
     {

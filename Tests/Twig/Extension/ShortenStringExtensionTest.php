@@ -14,7 +14,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\ShortenStringExtension;
 class ShortenStringExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\ShortenStringExtension::ShortenStringFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\ShortenStringExtension::ShortenStringFilter
      */
     public function testShortenStringFilter()
     {

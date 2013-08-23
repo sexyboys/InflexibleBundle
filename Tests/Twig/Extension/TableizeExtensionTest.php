@@ -14,7 +14,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\TableizeExtension;
 class TableizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\TableizeExtension::TableizeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\TableizeExtension::TableizeFilter
      */
     public function testTableizeFilter()
     {

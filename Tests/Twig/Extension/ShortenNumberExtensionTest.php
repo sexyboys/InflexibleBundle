@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\ShortenNumberExtension;
 class ShortenNumberExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\ShortenNumberExtension::ShortenNumberFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\ShortenNumberExtension::ShortenNumberFilter
      */
     public function testShortenNumberFilter()
     {

@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\SlugifyExtension;
 class SlugifyExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\SlugifyExtension::SlugifyFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\SlugifyExtension::SlugifyFilter
      */
     public function testSlugifyFilter()
     {

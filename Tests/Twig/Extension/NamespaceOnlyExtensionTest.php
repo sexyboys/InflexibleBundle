@@ -12,7 +12,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\NamespaceOnlyExtension;
 class NamespaceOnlyExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\NamespaceOnlyExtension::NamespaceOnlyFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\NamespaceOnlyExtension::NamespaceOnlyFilter
      */
     public function testNamespaceOnlyFilter()
     {

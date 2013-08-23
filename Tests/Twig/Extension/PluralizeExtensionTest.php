@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\PluralizeExtension;
 class PluralizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\PluralizeExtension::PluralizeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\PluralizeExtension::PluralizeFilter
      */
     public function testPluralizeFilter()
     {

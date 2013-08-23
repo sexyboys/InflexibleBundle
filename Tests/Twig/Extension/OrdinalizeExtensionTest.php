@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\OrdinalizeExtension;
 class OrdinalizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\OrdinalizeExtension::OrdinalizeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\OrdinalizeExtension::OrdinalizeFilter
      */
     public function testOrdinalizeFilter()
     {

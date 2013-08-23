@@ -12,7 +12,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\DenamespaceExtension;
 class DenamespaceExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\DenamespaceExtension::DenamespaceFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\DenamespaceExtension::DenamespaceFilter
      */
     public function testDenamespaceFilter()
     {

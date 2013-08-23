@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeExtension;
 class RelativeDatetimeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\RelativeDatetimeExtension::relativeDatetimeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeExtension::relativeDatetimeFilter
      */
     public function testRelativeDatetimeFilter()
     {

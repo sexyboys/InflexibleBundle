@@ -13,7 +13,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\SingularizeExtension;
 class SingularizeExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\SingularizeExtension::testSingularizeFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\SingularizeExtension::testSingularizeFilter
      */
     public function testSingularizeFilter()
     {

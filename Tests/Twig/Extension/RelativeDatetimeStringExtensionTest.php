@@ -14,7 +14,7 @@ use Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeStringExtension;
 class RelativeDatetimeStringExtensionTest extends \PHPUnit_Framework_TestCase{
 
     /**
-     * @covers Inflexible\Twig\Extension\RelativeDatetimeStringExtension::relativeDatetimeStringFilter
+     * @covers Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeStringExtension::relativeDatetimeStringFilter
      */
     public function testRelativeDatetimeStringFilter()
     {
