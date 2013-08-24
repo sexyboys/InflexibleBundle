@@ -11,6 +11,7 @@ parameters:
      relative_datetime.class: Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeExtension
      relative_datetime_string.class: Sexyboys\InflexibleBundle\Twig\Extension\RelativeDatetimeStringExtension
      shorten_number.class: Sexyboys\InflexibleBundle\Twig\Extension\ShortenNumberExtension
+     shorten_string.class: Sexyboys\InflexibleBundle\Twig\Extension\ShortenStringExtension
      singularize.class: Sexyboys\InflexibleBundle\Twig\Extension\ShortenStringExtension
      slugify.class: Sexyboys\InflexibleBundle\Twig\Extension\SlugifyExtension
      tableize.class: Sexyboys\InflexibleBundle\Twig\Extension\TableizeExtension
