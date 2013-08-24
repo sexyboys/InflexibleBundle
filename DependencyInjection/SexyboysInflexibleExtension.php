@@ -30,12 +30,6 @@ class SexyboysInflexibleExtension extends Extension
 
         //Load all twig extensions in array
 
-
-        $container->setParameter('inflexible.extensions', $config['services']);
-        if(array_key_exists("callback_url",$config)) $container->setParameter("oauth.callback",$config['callback_url']);
-        if(array_key_exists("debug",$config)) $debug = $config['debug'];
-
-        $container->setParameter("oauth.debug",$debug);
     }
     public function getAlias()
     {
