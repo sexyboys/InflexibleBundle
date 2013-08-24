@@ -70,7 +70,7 @@ $this->container->get('inflexible')->relativeDatetime(86400);
 ```
 #### Twig
 ```twig
-86400|relativeDatetime
+86400|relative_datetime
 ```
 
 Returns
@@ -301,7 +301,7 @@ $this->container->get('inflexible')->shorten("Lorem ipsum dolor sit amet",5,Shor
 ```
 #### Twig
 ```twig
-"Lorem ipsum dolor sit amet"|shorten_number(5,'start')
+"Lorem ipsum dolor sit amet"|shorten_string(5,'start')
 ```
 
 ### Pluralize

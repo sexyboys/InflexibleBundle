@@ -39,6 +39,6 @@ class SexyboysInflexibleExtension extends Extension
     }
     public function getAlias()
     {
-        return 'inflexible';
+        return 'sexyboys_inflexible';
     }
 }
