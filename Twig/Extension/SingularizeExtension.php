@@ -2,7 +2,7 @@
 
 namespace Sexyboys\InflexibleBundle\Twig\Extension;
 
-use Inflexible\Inflexible;
+use Doctrine\Common\Inflector\Inflector as DoctrineCommonInflector;
 
 /**
  * Class SingularizeExtension
@@ -26,7 +26,7 @@ class SingularizeExtension extends \Twig_Extension
      */
     public function SingularizeFilter($value)
     {
-        return Inflexible::singularize($value);
+        return DoctrineCommonInflector::singularize($value);
 
     }
 

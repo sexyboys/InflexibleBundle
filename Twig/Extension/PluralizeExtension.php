@@ -2,7 +2,7 @@
 
 namespace Sexyboys\InflexibleBundle\Twig\Extension;
 
-use Inflexible\Inflexible;
+use Doctrine\Common\Inflector\Inflector as DoctrineCommonInflector;
 
 /**
  * Class PluzalizeExtension
@@ -26,7 +26,7 @@ class PluralizeExtension extends \Twig_Extension
      */
     public function PluralizeFilter($value)
     {
-        return Inflexible::pluralize($value);
+        return DoctrineCommonInflector::pluralize($value);
 
     }
 

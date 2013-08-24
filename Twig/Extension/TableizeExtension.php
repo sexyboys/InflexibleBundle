@@ -2,7 +2,7 @@
 
 namespace Sexyboys\InflexibleBundle\Twig\Extension;
 
-use Inflexible\Inflexible;
+use Doctrine\Common\Inflector\Inflector as DoctrineCommonInflector;
 
 /**
  * Class TableizeExtension
@@ -26,7 +26,7 @@ class TableizeExtension extends \Twig_Extension
      */
     public function TableizeFilter($value)
     {
-        return Inflexible::tableize($value);
+        return DoctrineCommonInflector::tableize($value);
 
     }
 
